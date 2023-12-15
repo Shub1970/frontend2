@@ -1,0 +1,267 @@
+@font-face {
+  font-family: inter;
+  src: url(assets/fonts/Inter-VariableFont_slnt\wght.ttf) format("truetype");
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: Inter;
+  src: url("assets/fonts/static/Inter-Regular.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: Inter;
+  src: url("assets/fonts/static/Inter-Bold.ttf") format("truetype");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: Inter;
+  src: url("assets/fonts/static/Inter-ExtraBold.ttf") format("truetype");
+  font-weight: 900;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Inter";
+  src: url("assets/fonts/static/Inter-ExtraBold.eot");
+  src: url("assets/fonts/static/Inter-ExtraBold.eot?#iefix")
+      format("embedded-opentype"),
+    url("assets/fonts/static/Inter-ExtraBold.woff2") format("woff2"),
+    url("assets/fonts/static/Inter-ExtraBold.woff") format("woff");
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Inter";
+  src: url("assets/fonts/static/Inter-Regular.eot");
+  src: url("assets/fonts/static/Inter-Regular.eot?#iefix")
+      format("embedded-opentype"),
+    url("assets/fonts/static/Inter-Regular.woff2") format("woff2"),
+    url("assets/fonts/static/Inter-Regular.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Inter";
+  src: url("assets/fonts/static/Inter-Bold.eot");
+  src: url("assets/fonts/static/Inter-Bold.eot?#iefix")
+      format("embedded-opentype"),
+    url("assets/fonts/static/Inter-Bold.woff2") format("woff2"),
+    url("assets/fonts/static/Inter-Bold.woff") format("woff");
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Inter";
+  src: url("assets/fonts/static/Inter-Regular.eot");
+  src: url("assets/fonts/static/Inter-Regular.eot?#iefix")
+      format("embedded-opentype"),
+    url("assets/fonts/static/Inter-Regular.woff2") format("woff2"),
+    url("assets/fonts/static/Inter-Regular.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+:root {
+  --clr-primary-300: hsl(35, 77%, 62%);
+  --clr-primary-500: hsl(5, 85%, 63%);
+  --clr-netural-100: hsl(36, 100%, 99%);
+  --clr-netural-400: hsl(233, 8%, 79%);
+  --clr-netural-600: hsl(236, 13%, 42%);
+  --clr-netural-800: hsl(240, 100%, 5%);
+  --fw-neutral-bold: 400;
+  --fw-primary-bold: 700;
+  --fw-extra-bold: 800;
+  --fs-netural-400: 15px;
+  --header: var(--fw-bold);
+  --sub-header: var(--fw-semi-bold);
+  --fw-body: var(--fw-neutral-bold);
+}
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  font: inherit;
+}
+
+ul[role="list"],
+ol[role="list"] {
+  list-style: none;
+}
+
+html:focus-within {
+  scroll-behavior: smooth;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+/* Set core body defaults */
+body {
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+}
+
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+a {
+  outline-color: transparent;
+  text-decoration: none;
+  padding: 2px 1px 0;
+}
+
+/* Make images easier to work with */
+img,
+picture,
+svg {
+  max-width: 100%;
+  display: block;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html:focus-within {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* utility class */
+
+.flex {
+  display: flex;
+}
+
+.flex-wrap {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.flex-center {
+  justify-content: center;
+  align-items: center;
+}
+
+.flex-gap {
+  gap: 20px;
+}
+.flex-even {
+  display: flex;
+  flex-wrap: wrap;
+}
+.flex-even > * {
+  flex-shrink: 1;
+  flex-grow: 1;
+  flex-basis: 300px;
+}
+
+.flot-end {
+  margin-left: auto;
+}
+
+.common-space {
+  margin-top: 30px;
+}
+
+.custom-container {
+  --padding: 1rem;
+  --max-width: 1110px;
+  width: min(1110px, calc(100% - 2 * var(--padding)));
+  margin-inline: auto;
+}
+
+.text-neutral-weight-color {
+  color: var(--clr-netural-400);
+  font-weight: var(--fw-body);
+}
+.small-head {
+  font-weight: var(--fw-extra-bold);
+  color: var(--clr-netural-400);
+  font-size: 40px;
+}
+.x-small-head {
+  font-weight: var(--fw-extra-bold);
+  color: var(--clr-netural-800);
+}
+.text-primary {
+  color: var(--clr-netural-100);
+}
+
+/* end */
+
+/* first create utility class */
+
+/* custome css */
+
+body {
+  font-family: "Inter";
+  font-size: var(--fs-netural-400);
+  font-weight: var(--fw-neutral-bold);
+  margin-top: 20px;
+}
+
+.big-head {
+  font-weight: var(--fw-extra-bold);
+  font-size: xx-large;
+}
+
+.custom-flex {
+  --gap: 20px;
+  gap: var(--gap);
+}
+
+.mg-top {
+  margin-top: var(--gap);
+}
+.custom-flex .content-left {
+  flex-grow: 3;
+  flex-basis: 600px;
+}
+
+.custom-flex .content-right {
+  background-color: var(--clr-netural-800);
+  flex-grow: 1;
+  flex-basis: 340px;
+  padding: 20px;
+}
+
+.custom-flex-2 li {
+  flex-grow: 1;
+  flex-basis: 300px;
+}
+
+.custom-flex-2 li img {
+  flex-grow: 1;
+  max-width: 100px;
+}
+
+.custom-flex-2 li header {
+  flex-grow: 0;
+  flex-basis: 300px;
+}
