@@ -29,15 +29,35 @@
 
   <body>
     <header class="primary-header">
-      <div class="custom-container flex">
+      <div class="custom-container flex alg-item-center just-item-spacebw">
         <a href="#"><img src="assets/images/logo.svg" alt="" srcset="" /></a>
-        <nav class="primary-navigation flot-end">
-          <ul class="nav-list flex flex-gap" aria-label="navlist" role="list">
-            <li><a href="#">Home</a></li>
-            <li><a href="#">New</a></li>
-            <li><a href="#">Popular</a></li>
-            <li><a href="#">Trending</a></li>
-            <li><a href="#">Categories</a></li>
+        <a href="#" class="nav-button-open"
+          ><img src="./assets/images/icon-menu.svg" alt="hamburger-nav"
+        /></a>
+        <nav class="primary-navigation">
+          <a href="#" class="nav-button-close"
+            ><img src="/assets/images/icon-menu-close.svg" alt=""
+          /></a>
+          <ul
+            class="nav-list flex-wrap flex-gap"
+            aria-label="navlist"
+            role="list"
+          >
+            <li class="flex alg-item-center just-item-center">
+              <a href="#">Home</a>
+            </li>
+            <li class="flex alg-item-center just-item-center">
+              <a href="#">New</a>
+            </li>
+            <li class="flex alg-item-center just-item-center">
+              <a href="#">Popular</a>
+            </li>
+            <li class="flex alg-item-center just-item-center">
+              <a href="#">Trending</a>
+            </li>
+            <li class="flex alg-item-center just-item-center">
+              <a href="#">Categories</a>
+            </li>
           </ul>
         </nav>
       </div>
@@ -155,5 +175,6 @@
         >Frontend Mentor</a
       >. Coded by <a href="#">shubham kumar</a>.
     </div>
+    <script src="script.js"></script>
   </body>
 </html>

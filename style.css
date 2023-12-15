@@ -175,6 +175,20 @@ svg {
   display: flex;
   flex-wrap: wrap;
 }
+
+.alg-item-center {
+  align-items: center;
+}
+.alg-item-start {
+  align-items: start;
+}
+.just-item-spacebw {
+  justify-content: space-between;
+}
+.just-item-center {
+  justify-content: center;
+}
+
 .flex-even > * {
   flex-shrink: 1;
   flex-grow: 1;
@@ -264,4 +278,33 @@ body {
 .custom-flex-2 li header {
   flex-grow: 0;
   flex-basis: 300px;
+}
+
+[class*="nav-button"] {
+  display: none;
+}
+
+@media (max-width: 650px) {
+  [class*="nav-button"] {
+    display: block;
+  }
+  .primary-navigation {
+    display: none;
+  }
+  .primary-navigation.active {
+    position: fixed;
+    inset: 0 0 0 auto;
+    width: 250px;
+    display: flex;
+    flex-wrap: wrap;
+    background-color: wheat;
+    padding: 20px;
+    align-content: start;
+    transition: all ease-out 250ms;
+  }
+  .primary-navigation > *:not(ul),
+  .primary-navigation ul li {
+    flex-grow: 1;
+    flex-basis: 200px;
+  }
 }
